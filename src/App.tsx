@@ -6,7 +6,7 @@ import MindElixir, { Options } from "mind-elixir";
 function App() {
   const plugins = [];
   const [data, setData] = useState(MindElixir.new("new topic"));
-  const [options, setOptions] = useState<Options>({
+  const [options, setOptions] = useState<Pick<Options, "direction">>({
     direction: MindElixir.SIDE,
   });
   const changeDirection = () => {
